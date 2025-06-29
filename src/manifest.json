@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "УМ Пагинация Исправление",
+  "version": "1.0",
+  "description": "Исправляет проблему с сбросом пагинации на первую страницу при изменении данных ученика",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://dev-smart-monitoring.autodep.umschool.dev/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://dev-smart-monitoring.autodep.umschool.dev/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "УМ Пагинация Исправление"
+  },
+  "icons": {
+  "16": "icon16.png",
+  "32": "icon32.png",
+  "48": "icon64.png",
+  "128": "icon128.png"
+}
+} 
